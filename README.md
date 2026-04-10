@@ -39,7 +39,7 @@ cd techstore
 
 ### 3. Встановлення залежностей
 
-⚠️ Перед встановленням залежностей ознайомитесь з [webpack-markup-starter](https://github.com/lvog/webpack-markup-starter) який використовується в цьому проекті.
+⚠️ Перед встановленням залежностей ознайомтесь з [webpack-markup-starter](https://github.com/lvog/webpack-markup-starter) який використовується в цьому проекті.
 
 ```bash
 npm install
