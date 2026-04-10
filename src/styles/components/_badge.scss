@@ -1,0 +1,13 @@
+.badge {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: var(--badge-font-size);
+  font-weight: var(--badge-font-weight);
+  text-transform: uppercase;
+  text-align: center;
+  padding: var(--badge-padding);
+  margin-bottom: 8px;
+  color: var(--badge-color);
+  background: var(--badge-bg);
+  border-radius: var(--badge-border-radius);
+}

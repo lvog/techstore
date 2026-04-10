@@ -1,0 +1,24 @@
+@use "abstracts/mixins" as m;
+
+.btn {
+  @include m.transition(box-shadow);
+  min-width: 131px;
+  display: inline-block;
+  vertical-align: middle;
+  font-family: var(--btn-font-family);
+  font-size: var(--btn-font-size);
+  line-height: var(--btn-line-height);
+  text-transform: capitalize;
+  text-align: center;
+  padding: var(--btn-padding);
+  color: var(--btn-color);
+  background: var(--btn-background);
+  border-radius: var(--btn-border-radius);
+  border: none;
+  cursor: pointer;
+
+  @include m.hover {
+    color: var(--btn-color);
+    box-shadow: var(--btn-hover-shadow);
+  }
+}

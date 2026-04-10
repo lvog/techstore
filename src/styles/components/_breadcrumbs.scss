@@ -1,0 +1,44 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+
+.breadcrumbs-nav {
+  overflow: hidden;
+  margin-bottom: 35px;
+}
+
+.breadcrumbs {
+  @include m.listReset;
+  @include m.horizontalScrollContainer;
+  display: flex;
+  align-items: center;
+  font-size: var(--breadcrumb-font-size);
+  color: var(--breadcrumb-color);
+
+  li {
+    flex: 0 0 auto;
+
+    &.active {
+      color: var(--breadcrumb-active-color);
+    }
+
+    &:first-child {
+      &::before {
+        content: none;
+      }
+    }
+
+    &::before {
+      content: var(--breadcrumb-separator);
+      margin: 0 8px;
+    }
+  }
+
+  a {
+    @include m.transition(color);
+    color: inherit;
+
+    @include m.hover {
+      color: var(--breadcrumb-active-color);
+    }
+  }
+}

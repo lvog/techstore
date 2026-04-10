@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+input/
+
+# logs
+*.log
+
+# source maps
+*.map
+
+# OS
+.DS_Store
+Thumbs.db

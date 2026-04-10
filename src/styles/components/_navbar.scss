@@ -1,0 +1,51 @@
+@use "abstracts/mixins" as m;
+
+.navbar {
+  max-width: 224px;
+  width: 100%;
+  background: var(--color-gray-100);
+  border-radius: var(--border-radius-xxl);
+  position: fixed;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 16px;
+  z-index: 999;
+}
+
+.navbar-list {
+  @include m.listReset;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+
+  li {
+    padding: 8px;
+  }
+}
+
+.favorite-holder {
+  position: relative;
+
+  .num {
+    @include m.transition(opacity visibility);
+    @include m.hidden;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-xs);
+    padding: 2px;
+    color: var(--color-white);
+    background: var(--color-purple);
+    border-radius: var(--border-radius-rounded);
+    position: absolute;
+    right: -5px;
+    top: -8px;
+
+    &.active {
+      @include m.visible;
+    }
+  }
+}

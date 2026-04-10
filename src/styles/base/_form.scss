@@ -1,0 +1,77 @@
+@use "abstracts/variables" as v;
+@use "abstracts/mixins" as m;
+
+.form-group {
+  @include m.transition(border-color);
+  margin-bottom: var(--base-margin-bottom);
+
+  &.input-error {
+    .error-message {
+      display: block;
+    }
+  }
+}
+
+label {
+  display: block;
+  font-size: var(--label-font-size);
+  line-height: var(--label-line-height);
+  font-weight: var(--label-font-weight);
+  margin-bottom: 4px;
+
+  b {
+    color: var(--color-purple);
+  }
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="search"],
+input[type="password"],
+textarea {
+  @include m.transition(box-shadow);
+  appearance: none;
+  width: 100%;
+  height: var(--input-height);
+  color: var(--input-color);
+  padding: var(--input-padding);
+  border: 1px solid var(--input-border-color);
+  border-radius: var(--input-border-radius);
+
+  &::placeholder {
+    color: var(--input-placeholder-color);
+  }
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--input-focus-shadow);
+  }
+
+  .input-error & {
+    border-color: var(--input-error-border-color);
+  }
+}
+
+textarea {
+  min-height: 115px;
+  resize: none;
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  appearance: none;
+  cursor: pointer;
+
+  &:focus-visible {
+    outline: none;
+    box-shadow: var(--input-focus-shadow);
+  }
+}
+
+.error-message {
+  display: none;
+  color: var(--input-error-color);
+}
